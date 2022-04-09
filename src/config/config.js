@@ -14,7 +14,7 @@ module.exports={
     "dialect": "mysql"
   },
   "production":{
-    use_env_variable : 'DATABAE_URL',
+    use_env_variable : 'DATABASE_URL',
     dialect: "prostgress",
     protocol : "postgress",
     dialectOptions: {
