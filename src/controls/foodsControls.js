@@ -22,7 +22,12 @@ getAll: (req, res)=> {
 },
 postData :(req, res)=> {
     let {body} = req;
-    foods.create(body)
+
+    const newData = {
+        ...body,
+        image: req.image.url,
+    }
+    foods.create(newData)
     .then((data)=>{
         res.send({
             msg: 'succes get all data ',
